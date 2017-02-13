@@ -1,0 +1,85 @@
+/*index top*/
+*{margin:0;padding:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.floor {width: 100%;position: relative;}
+
+/************************一栏图片*****************************/
+a.pic, a.pic img {display: block;}
+/*轮播图片*/
+.controlBtn {position: absolute;left: 0px;bottom: 10px;z-index: 1;width: 100%;text-align: center;}
+.controlBtn ul {display: inline-block;text-align: center;}
+.controlBtn li {float: left;width: 14px;height:14px;font-size: 0;margin-right: 5px;overflow: hidden;cursor: pointer;background-color: #fff;border-radius: 50%;opacity: 0.2;}
+.controlBtn li.on{opacity: 1}
+.controlBtn li:last-child{margin-right: 0}
+/***********************两栏图片*****************************/
+.saleTwoColumns {padding: 4%;}
+.twoColumns_item{margin-bottom: 1.6%;}
+.twoColumns_item a {display: block;width: 49.2%;float: left;margin-right: 1.6%;}
+.twoColumns_item:last-child{margin-bottom: 0;}
+.twoColumns_item a:last-child{margin-right: 0;}
+.twoColumns_item img{display: block;width:100%;}
+/***********************大图单品****************************/
+.saleBigProImg{padding: 0 4%;}
+.saleBigProImg_item{display: block;border-bottom: 1px solid #e2dede;margin-top: 0.5rem}
+.saleBigProImg .saleBigProImg_item:last-of-type{border-bottom: none;}
+.saleBigProImg .saleBigProImg_item:first-of-type{margin-top: 0;}
+.saleBigProImg_item img{display: block;width:100%;}
+.saleBigProMsg{background: #fff;padding: 0.28rem 0.2rem 0.4rem 0.2rem;position: relative;}
+.saleBigProImg_item .proAcTit{color:#000;font-size: 0.3rem;max-width: 73.8%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.saleBigProImg_item .proTit{color: #919192;font-size:0.22rem;max-width: 73%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin: 5px 0;}
+.saleBigProImg_item .proAcPrice em{color: #e7459b;font-size: 0.36rem;font-weight: bold;font-family: arial;font-style:italic;margin-left: -5px;}
+.saleBigProImg_item .proAcPrice span{color: #919192;font-size: 0.22rem;text-decoration: line-through;font-family: arial;font-style:italic;margin-left: 0.1rem;}
+.saleBigProImg_item .proAcPrice i{font-family: "微软雅黑";font-style:italic;}
+.saleBigProImg_item .buyNowBtn{display: block;position: absolute;right:0.2rem;bottom: 0.5rem;color: #000;font-size: 0.24rem;border:2px solid #000;padding: 0.12rem 0.25rem;}
+/**********************商品列表******************************/
+.saleProList {padding:0 4%;}
+.proList li{float: left;margin-right: 1.6%;width:49.2%;margin-bottom: 1.6%}
+.proList li:nth-child(even){margin-right: 0;}
+.proList li a{display: block;width:100%;background: #fff;padding: 3.13%;}
+.proList img.proImg{display: block;width:100%;}
+.proList .pro_top{background: #f4f4f4;padding-bottom: 10%;text-align: center;}
+.proList .pro_tit{font-size: 0.22rem;color: #000;height:0.62rem;line-height:0.31rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;padding: 0 3.13%;}
+.proList .pro_price{font-size: 0.24rem;color: #e7459b;font-weight: bold;font-style: italic;margin-top: 3.13%;padding: 0 3.13%;}
+.proList .pro_from{padding-top:3.13%;color: #919192;font-size: 0.2rem; }
+.proList .pro_nation{float: left;width:48%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.proList .nationLogo{width:0.28rem;height: 0.28rem;border-radius: 50%;margin-right: 8px;vertical-align: middle;}
+.proList .pro_website{width:50.6%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;float: right;}
+/**********************标签栏******************************/
+.fixNav{background: #fff;color: #000;font-size: 0.24rem;position:relative;}
+.fixNav .nav_top{white-space: nowrap;-webkit-transform: translateZ(0);transform: translateZ(0);border-bottom: 1px solid #e2dede;}
+
+.fixNav .nav_top .nav_top_list{width:90%;overflow:hidden;}
+.fixNav .nav_top .nav_top_list ul{transition-duration: 600ms; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transform: translate(0px, 0px) translateZ(0px);}
+.fixNav .nav_top .nav_top_list a{color: #000;line-height: 1;}
+.fixNav .nav_top a{padding: 0.26rem 0.47rem;display: block;}
+.fixNav .nav_top a.currentNav{border-bottom: 3px solid #000;padding: 0.24rem 0.4rem;}
+.fixNav .nav_top a.navDropBtn{position: absolute;width:10%;text-align: center;vertical-align: middle;right: 0;top:0;padding: 0.26rem 0;transform-origin: 0px 0px 0px; transform: scale(1, 1);}
+.fixNav .navDropContent{display: none}
+.fixNav .navDropContent a{color: #919192;padding: 0.16rem 0 0.16rem 0.16rem;display: block;}
+.fixNav .navDropContent li{width:25%;}
+.fixNav .navDropContent{padding: 4%;background:#faf6f6;}
+.fixNav li{float: left;}
+.fixedNave{position: fixed;top:0;left:0;width:100%;}
+/*轮播图*/
+.bannerList li{display: table-cell;vertical-align: top;width: 100%;}
+/*标签内内容*/
+.saleMobileNav .saleMobileNavContent_item{padding: 0.25rem 4% 0.15rem 4%; border-bottom: 1px solid #e2dede;}
+.saleMobileNavContent_item .saleBigProImg_item{margin-top: 0.3rem;}
+.saleMobileNav .saleMobileNavContent_item:last-child{border-bottom: none;}
+.navTitleImg,.navTitleImg img{display: block;width:100%;}
+.saleMobileNav .proList{margin-top:0.2rem; }
+/**********************视频播放器******************************/
+.saleVideoContent{margin:0 4%;}
+.mySaleVideo{width:100%;height:;}
+/**********************图标******************************/
+.saleIcon{background-image: url(http://sale.baobeigezi.com/template/h5/images/ac_icon.png) ;background-repeat:no-repeat;background-size:1rem;display: inline-block;}
+.navDropBtn .saleIcon{width:0.16rem;height:0.12rem;background-position: -0.78rem 0;}
+/*等待*/
+#wait{width:100%;height:100%;position: fixed;z-index: 99999;background: url(http://sale.baobeigezi.com/template/h5/images/loading_gif.gif) no-repeat center;top: 0;left: 0;}
+/*弹窗提示*/
+.shadeBox{position: fixed;width:100%;height: 100%;z-index: 9999;left:0;right: 0;top:0;bottom: 0;display: none;}
+.shade{position: absolute;width:100%;height: 100%;background:rgba(0,0,0,0.8);left: 0;top: 0;right: 0;bottom: 0;}
+.shadeContent{position: absolute;width: 5.28rem;height: 3.12rem;left: 50%;top: 50%;margin-left: -2.64rem;margin-top: -1.56rem;background: #fff;display: table;}
+.closeBtn {display: block;position: absolute;right: 0.2rem;top: 0.2rem;z-index: 5;cursor: pointer;background-size:100px;background-position:  -78px -31px;width: 15px;height: 15px;}
+#tipsShadeBox .tipsText{font-size: 0.3rem;color: #000;text-align: center;display: table-cell;vertical-align: middle;}
+}
+

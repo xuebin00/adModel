@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>移动端活动模板</title>
+    <link href="http://sale.baobeigezi.com/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+    <link href='css/chose.css' rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="aside">
+    <div class="upperStyle">
+        <div class="item clearfix">
+            适用平台:<span class='platform'>移动端</span>
+        </div>
+        <div class="item clearfix">
+            <span class="label">活动名称</span>
+            <div class="itemContent">
+                <input type="text" placeholder="建议最多14个字" class="inputText form_control" id='saleName'>
+            </div>
+        </div>
+        <div class="item clearfix">
+            <span class="label noHeightLabel">页面背景色</span>
+            <div class="itemContent">
+                <div class="bgColor" id='bgColor'>
+                    <label><input type="radio" name="bgColor" value="页面整体配置" checked ='checked'>页面整体配置</label>
+                    <label><input type="radio" name="bgColor" value="楼层整体配置">楼层整体配置</label>
+                </div>
+                <div class="pageBg">
+                    <label><input type="radio" name="pageBg" value="背景色" checked ='checked'>背景色<input type="text" value="#fff" class="form_control" id='pageBgColor'></label>
+                    <div class="pageBgImg">
+                        <label><input type="radio" name="pageBg" value="背景图片">背景图片</label>
+                        <div class="uploadImg">
+                            <form action="http://erp.baobeigezi.com/activityTemplate/upload/upload_pic" method="post" enctype="multipart/form-data">
+                                <img src="images/uploadImg.png" alt="上传图片">
+                                <input type="file" id="pageBgImg" class="uploadShareImgBtn uploadImgBtn" name="pic">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item clearfix">
+            <span class="label shareLabel">分享图片</span>
+            <div class="itemContent">
+                <div class="uploadImg">
+                    <form action="http://erp.baobeigezi.com/activityTemplate/upload/upload_pic" method="post" enctype="multipart/form-data">
+                        <img src="images/uploadImg.png" alt="上传图片">
+                        <input type="file" id="uploadShareImgBtn" class="uploadShareImgBtn uploadImgBtn" name="pic">
+                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="item clearfix">
+            <span class="label">分享标题</span>
+            <div class="itemContent">
+                <input type="text" placeholder="" class="inputText form_control" id='shareTitle'>
+            </div>
+        </div>
+        <div class="item clearfix">
+            <span class="label">分享内容</span>
+            <div class="itemContent">
+                <textarea class="form_control inputText" rows="3" id='shareContent'></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="templates">
+        <div class="title">常用模板</div>
+        <ul class='asideNav' id='templatesList'>
+            <li><a href="javascript:;" data-template='saleSlideBanners' data-title='轮播图片'>轮播图片(多张)</a></li>
+            <li><a href="javascript:;" data-template='saleBanner' data-title='一栏图片'>一栏图片(单张)</a></li>
+            <li><a href="javascript:;" data-template='saleTwoColumns' data-title='两栏图片'>两栏图片</a></li>
+            <li><a href="javascript:;" data-template='saleMobileNav' data-title='导航栏'>导航栏</a></li>
+            <li><a href="javascript:;" data-template='saleBigProImg' data-title='大图商品'>大图商品</a></li>
+            <li><a href="javascript:;" data-template='saleProList' data-title='商品列表'>商品列表</a></li>
+            <li><a href="javascript:;" data-template='saleVideo' data-title='视频'>视频</a></li>
+        </ul>
+    </div> 
+    <div class="aside_btn">
+        <a class="previewBtn" id="previewBtn">预览</a>
+        <a class="publishBtn" id="publishBtn">发布</a>
+    </div>  
+</div>
+
+<div class="wrapper">
+    <!-- 头部 -->
+    <!--h5头部-->
+    <div class="head fixed-top">
+        <a href="javascript:history.go(-1);" class="back-last"></a>
+        <h1 class="list-title-h1">活动详情</h1>
+        <a class="address-home" href="http://3g.baobeigezi.com"></a>
+    </div>
+    <div class="container" id='container' style="top:40px;">
+        <!--轮播图/一栏图片-->
+        <div class="saleSlideBanners floor" date-template='saleSlideBanners' id='saleSlideBanners1' date-templateNum='1' data-title="轮播图片">
+            <div class="bannerList">
+                <ul>
+                    <li>
+                        <a class="pic" href="javascript:;">
+                            <img width="100%" src ="images/lunbo.jpg"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="controlBtn">
+                <ul></ul>
+            </div>
+        </div>
+        <!--两栏图片-->
+        <div class="saleTwoColumns floor" date-template="saleTwoColumns" id="saleTwoColumns1" date-templateNum="1" data-title="两栏图片">
+            <div class="twoColumns_item clearfix" style="margin-bottom:0px;">
+               <a href="javascript:;"><img src="images/lianglan.jpg" alt=""></a>
+               <a href="javascript:;"><img src="images/lianglan.jpg" alt=""></a>
+            </div>
+        </div>
+        <!--一栏图片作为大图标题-->
+        <div class="saleBanner floor" date-template='saleBanner' id='saleBanner1' date-templateNum='1' data-title="一栏图片">
+            <a class="pic" href="">
+                <img src="images/yizhang.jpg" alt=""/>
+            </a>
+        </div>
+        <!--大图商品-->
+        <div class="saleBigProImg floor loadPro" date-template="saleBigProImg" id="saleBigProImg1" date-templateNum="1" data-title="大图商品">
+            <a class='saleBigProImg_item' href="javascript:;">
+                <img src="images/bigImg.jpg" alt="" />
+                <div class="saleBigProMsg">
+                    <div class="proAcTit">广告词广告词广告词广告词广告词广告词广告词广告词广告词</div>
+                    <div class="proTit">商品标题标题标题标题标题标题</div>
+                    <div class="proAcPrice">
+                        <em><i>￥</i>45.00</em>
+                        <span><i>￥</i>22.50</span>
+                    </div>
+                    <div class="buyNowBtn">立即购买</div>
+                </div>
+            </a>
+            <a class='saleBigProImg_item' href="javascript:;">
+                <img src="images/bigImg.jpg" alt="" />
+                <div class="saleBigProMsg">
+                    <div class="proAcTit">广告词广告词广告词广告词广告词广告词广告词广告词广告词</div>
+                    <div class="proTit">商品标题标题标题标题标题标题</div>
+                    <div class="proAcPrice">
+                        <em><i>￥</i>45.00</em>
+                        <span><i>￥</i>22.50</span>
+                    </div>
+                    <div class="buyNowBtn">立即购买</div>
+                </div>
+            </a>
+        </div>
+        <!---商品列表-->
+        <div class="saleProList floor loadPro" date-template="saleProList" id="saleProList1" date-templateNum="1" data-title="商品列表">
+            <div class="proList">
+                <ul class="clearfix">
+                    <li>
+                        <a>
+                            <div class="pro_top">
+                                <img src="images/proImg.jpg" class="proImg"/> 
+                                <div class="pro_tit">商品标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                                <div class="pro_price">￥1233</div>
+                            </div>
+                           <div class="pro_from clearfix">
+                               <div class="pro_nation"><img src="http://static01.baocdn.com/images/country/m_index_8.png" alt="" class="nationLogo">加拿大</div>
+                               <div class="pro_website">amazonamazonsdhfshf</div>
+                           </div>
+                        </a> 
+                    </li>
+                    <li>
+                        <a>
+                            <div class="pro_top">
+                                <img src="images/proImg.jpg" class="proImg"/> 
+                                <div class="pro_tit">商品标题标题标题标题标题标题标题标题标题标题标题标题</div>
+                                <div class="pro_price">￥1233</div>
+                            </div>
+                           <div class="pro_from clearfix">
+                               <div class="pro_nation"><img src="http://static01.baocdn.com/images/country/m_index_8.png" alt="" class="nationLogo"/>加拿大</div>
+                               <div class="pro_website">amazonamazonsdhfshf</div>
+                           </div>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--视频文件-->
+        <div class="saleVideo floor" date-template="saleVideo" id="saleVideo1" date-templateNum="1" data-title="视频">
+            <div class="saleVideoContent loadPro">
+               <video src="" controls="controls" poster="images/video.jpg" class='mySaleVideo' >
+                </video> 
+            </div>
+        </div>
+        <!--导航栏-->
+        <div class="saleMobileNav floor" date-template="saleMobileNav" id="saleMobileNav1" date-templateNum="1" data-title="导航栏">
+            <div class="fixNav">
+                <div class="nav_top">
+                    <div class="nav_top_list">
+                        <ul class="clearfix">
+                            <li><a href="javascript:;" class="currentNav">导航1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="saleMobileNavContent">
+                <div class="saleMobileNavContent_item loadPro" data-index='0'>
+                    <!--如果图片标签不能点击要删掉href属性-->
+                    <a href="javascript:;" class="navTitleImg"><img src="images/navTitImg.jpg" alt=""></a>
+                    <!--如果有大图商品-->
+                    <div class="saleBigProImgItems">
+                        <a class='saleBigProImg_item' href="javascript:;">
+                            <img src="images/bigImg.jpg" alt="" />
+                            <div class="saleBigProMsg">
+                                <div class="proAcTit">广告词广告词广告词广告词广告词广告词广告词广告词广告词</div>
+                                <div class="proTit">商品标题标题标题标题标题标题</div>
+                                <div class="proAcPrice">
+                                    <em><i>￥</i>45.00</em>
+                                    <span><i>￥</i>22.50</span>
+                                </div>
+                                <div class="buyNowBtn">立即购买</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="proList">
+                        <ul class="clearfix">
+                            <li>
+                                <a>
+                                    <div class="pro_top">
+                                        <img src="http://img02.baoimg.net/photo/201608/2016080813002282896821_250x250.jpg" class="proImg"/> 
+                                        <div class="pro_tit">商品标题标题标题标题标题标题</div>
+                                        <div class="pro_price">￥1233</div>
+                                    </div>
+                                   <div class="pro_from clearfix">
+                                       <div class="pro_nation"><img src="http://static01.baocdn.com/images/country/m_index_8.png" alt="" class="nationLogo">加拿大</div>
+                                       <div class="pro_website">amazonamazonsdhfshf</div>
+                                   </div>
+                                </a> 
+                            </li>
+                            <li>
+                                <a>
+                                    <div class="pro_top">
+                                        <img src="http://img02.baoimg.net/photo/201608/2016080813002282896821_250x250.jpg" class="proImg"/> 
+                                        <div class="pro_tit">商品标题标题标题标题标题标题</div>
+                                        <div class="pro_price">￥1233</div>
+                                    </div>
+                                   <div class="pro_from clearfix">
+                                       <div class="pro_nation"><img src="http://static01.baocdn.com/images/country/m_index_8.png" alt="" class="nationLogo"/>加拿大</div>
+                                       <div class="pro_website">amazonamazonsdhfshf</div>
+                                   </div>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="on_top saleIcon" style="display: none;" href='javascript:void(0)'></a>
+    <div class="editorMask containerMask" id='containerMask'>
+    </div>
+    <div class="shadeBox" id="tipsShadeBox">
+        <div class="shade"></div>
+        <div class="shadeContent">
+            <a href="javascript:;" class="closeBtn saleIcon"></a>
+            <div class="tipsText">这是提示</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://sale.baobeigezi.com/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="http://sale.baobeigezi.com/template/h5/js/mobile.js"></script>
+<script type="text/javascript" src="http://sale.baobeigezi.com/template/h5/js/page.js"></script>
+</body>
+</html>
